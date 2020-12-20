@@ -1,10 +1,22 @@
+import React, { useState } from 'react';
+import Nav from './components/Nav';
+import Cart from './components/Cart';
+import Home from './components/Home';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
 
-    </div>
-  );
+  const [cartItems, setCart] = useState({});
+  
+  return (
+    <BrowserRouter>
+      <Nav />
+      <Switch>
+        <Route exact path='/'><Home cartItems={cartItems} setCart={setCart} /></Route>
+        <Route path='/cart'><Cart /></Route>
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App;
