@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 const Home = (props) => {
   useEffect(() => {
     document.addEventListener("click", addToCart);
-    console.log(props.cartItems, 'prop');
     return () => {
       document.removeEventListener("click", addToCart);
     };
