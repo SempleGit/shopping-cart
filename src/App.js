@@ -6,7 +6,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
 
-  const [cartItems, setCart] = useState({});
+  const [cartItems, setCart] = useState(new Map());
   
   return (
     <BrowserRouter>

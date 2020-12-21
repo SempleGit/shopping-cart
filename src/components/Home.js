@@ -1,19 +1,11 @@
 import React, { useEffect } from 'react';
 
 const Home = (props) => {
-  useEffect(() => {
-    document.addEventListener("click", addToCart);
-    return () => {
-      document.removeEventListener("click", addToCart);
-    };
-  });
 
-  const addToCart = (e) => {
-    if (e.target.id === '' || e.target.id === 'root') return;   
-    const itemToAdd = e.target.id;
+  const addToCart = (itemToAdd) => {
     props.setCart((items) => {
-      const newItems = {...items};
-      return newItems[itemToAdd] ? {...newItems, [itemToAdd]: ++newItems[itemToAdd]} : {...newItems, [itemToAdd]: 1}
+      const newItems = new Map(items);
+      return newItems.has(itemToAdd) ? newItems.set(itemToAdd, newItems.get(itemToAdd)+1): newItems.set(itemToAdd, 1);
     });
   }
 
@@ -24,17 +16,24 @@ const Home = (props) => {
         <h2>Audiobooks</h2>
         <div className="audiobooks">
           <ul>
-            <li className="audiobook" id="a1">book1</li>
-            <li className="audiobook" id="a2">book2</li>
-            <li className="audiobook" id="a3">book3</li>
-            <li className="audiobook" id="a4">book4</li>
-            <li className="audiobook" id="a5">book5</li>
+            <li className="audiobook" id="a1">book1
+              <button onClick={() => addToCart("a1")}>Add</button>
+            </li>
+            <li className="audiobook" id="a2">book2
+              <button onClick={() => addToCart("a2")}>Add</button>
+            </li>
+            <li className="audiobook" id="a3">book3
+              <button onClick={() => addToCart("a3")}>Add</button>
+            </li>
+            <li className="audiobook" id="a4">book4
+              <button onClick={() => addToCart("a4")}>Add</button>
+            </li>
+            <li className="audiobook" id="a5">book5
+              <button onClick={() => addToCart("a5")}>Add</button>
+            </li>
           </ul>
         </div>
       </section>
-      {/* 1. style items.
-          2. add item to cart
-          3. remove item from cart*/}
     </div>
   )
 }

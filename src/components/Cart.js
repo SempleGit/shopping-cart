@@ -3,32 +3,32 @@ import React, { useEffect } from 'react';
 const Cart = (props) => {
 
   useEffect(() => {
-    document.addEventListener("click", removeFromCart);
+    document.addEventListener("click", reduceQuantity);
     return () => {
-      document.removeEventListener("click", removeFromCart);
+      document.removeEventListener("click", reduceQuantity);
     };
   });
 
   const cartDisplay = () => {
-    const shoppingCart = {...props.cartItems};
-    const items = Object.keys(shoppingCart);
+    const shoppingCart = new Map(props.cartItems);
+    const items = Array.from(shoppingCart.keys());
     const display = items.map(item => (
-      <li key={item} id={item}>Item: {item} Quantity: {shoppingCart[item]}</li>
+      <li key={item} id={item}>Item: {item} Quantity: {shoppingCart.get(item)}</li>
     ));
     return display;
   }
 
-  const removeFromCart = (e) => {
+  const reduceQuantity = (e) => {
     if (e.target.id === '' || e.target.id === 'root') return;   
     const itemToRemove = e.target.id;
     props.setCart((items) => {
-      let newItems = {...items};
-      if (newItems[itemToRemove] > 1)  {
-        newItems = {...newItems, [itemToRemove]: --newItems[itemToRemove] };
+      const shoppingCart = new Map(items);
+      if (shoppingCart.get(itemToRemove) > 1)  {
+        shoppingCart.set(itemToRemove, shoppingCart.get(itemToRemove)-1);
        } else {
-         delete newItems[itemToRemove];
+         shoppingCart.delete(itemToRemove);
        }
-       return newItems
+       return shoppingCart;
     });
   }
 
