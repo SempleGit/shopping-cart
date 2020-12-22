@@ -13,7 +13,7 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path='/'><Home cartItems={cartItems} setCart={setCart} /></Route>
-        <Route path='/cart'><Cart cartItems={cartItems} setCart={setCart}/></Route>
+        <Route path='/cart'><Cart cartItems={cartItems} setCart={setCart} /></Route>
       </Switch>
     </BrowserRouter>
   )
