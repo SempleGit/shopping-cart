@@ -5,7 +5,7 @@ const Cart = (props) => {
   const adjustQuantity = (itemToAdjust, adjuster) => {
     props.setCart((items) => {
       const shoppingCart = new Map(items);
-      const updatedAmount = shoppingCart.get(itemToAdjust)+adjuster;
+      const updatedAmount = +shoppingCart.get(itemToAdjust)+adjuster;
       if (updatedAmount)  {
         shoppingCart.set(itemToAdjust, updatedAmount);
        } else {
@@ -28,8 +28,8 @@ const Cart = (props) => {
   const handleChange = (e, item) => {
     props.setCart((items) => {
       const shoppingCart = new Map(items);
-      if (+e.target.value > 0)  {
-         shoppingCart.set(item, +e.target.value);
+      if (e.target.value > 0 || e.target.value === "")  {
+         shoppingCart.set(item, e.target.value);
        } else {
         deleteItem(item);
        }
@@ -45,13 +45,18 @@ const Cart = (props) => {
     });
   }
 
+  const checkCartInput = e => {
+    e.target.setCustomValidity("Please input a number or remove.")
+    e.target.reportValidity()
+  }
+
   const cartDisplay = () => {
     const shoppingCart = new Map(props.cartItems);
     const items = Array.from(shoppingCart.keys());
     const display = items.map(item => (
       <li key={item} id={item}>Item: {item} Quantity: 
         <button className='adjust-button' onClick={() => adjustQuantity(item, 1)}>+</button>
-        <input type='number' onChange={e => handleChange(e, item)} value={shoppingCart.get(item)}></input>
+        <input type='number' required onBlur={checkCartInput} onChange={e => handleChange(e, item)} value={shoppingCart.get(item)}></input>
         <button className='adjust-button' onClick={() => adjustQuantity(item, -1)}>-</button>
         <button onClick={() => deleteItem(item)}>Remove</button>
       </li>
