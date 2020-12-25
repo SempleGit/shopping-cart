@@ -62,7 +62,7 @@ const Cart = (props) => {
     const items = Array.from(shoppingCart.keys());
     const display = items.map((item, index) => (
       <li key={index}>
-        <p><Link to='/audiobook/'>{item.title}</Link></p>
+        <p><Link to={`/audiobook/${item.id}`}>{item.title}</Link></p>
         <p>Quantity: 
         <button className='adjust-button' onClick={() => adjustQuantity(item, 1)}>+</button>
         <input type='number' onChange={e => handleChange(e, item)} value={shoppingCart.get(item)}></input>

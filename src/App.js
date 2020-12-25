@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Nav from './components/Nav';
 import Cart from './components/Cart';
 import Home from './components/Home';
+import BookDetail from './components/BookDetail';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route exact path='/'><Home cartItems={cartItems} setCart={setCart} /></Route>
         <Route path='/cart'><Cart cartItems={cartItems} setCart={setCart} /></Route>
+        <Route path='/audiobook/:id'><BookDetail /></Route>
       </Switch>
     </BrowserRouter>
   )
