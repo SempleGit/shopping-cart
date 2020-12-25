@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cart = (props) => {
   
@@ -59,12 +60,15 @@ const Cart = (props) => {
   const cartDisplay = () => {
     const shoppingCart = new Map(props.cartItems);
     const items = Array.from(shoppingCart.keys());
-    const display = items.map(item => (
-      <li key={item} id={item}>Item: {item} Quantity: 
+    const display = items.map((item, index) => (
+      <li key={index}>
+        <p><Link to='/audiobook/'>{item.title}</Link></p>
+        <p>Quantity: 
         <button className='adjust-button' onClick={() => adjustQuantity(item, 1)}>+</button>
         <input type='number' onChange={e => handleChange(e, item)} value={shoppingCart.get(item)}></input>
         <button className='adjust-button' onClick={() => adjustQuantity(item, -1)}>-</button>
         <button onClick={() => deleteItem(item)}>Remove</button>
+        </p>
       </li>
     ));
     return display;
