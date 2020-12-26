@@ -4,10 +4,20 @@ import { useParams } from 'react-router-dom';
 
 const BookDetail = () => {
   const { id } = useParams();
-  console.log(id);
+  const getBook = (bookId) => {
+    const bookDetail = audiobooks.find( ({id}) => id === bookId)
+    return (
+      <ul> 
+        <li>{bookDetail.title}</li>
+        <li>{bookDetail.author}</li>
+      </ul>
+    )
+  }
+
   return (
     <section className='bookDetails'>
       <h1>Book Details</h1>
+      <p>{getBook(id)}</p>
     </section>
   )
 }
