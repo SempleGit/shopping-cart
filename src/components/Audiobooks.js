@@ -1,5 +1,5 @@
 import React from 'react';
-import uniqid from 'uniqid';
+import BookLink from './BookLink';
 import { audiobooks } from './helpers';
 
 const Audiobooks = (props) => {
@@ -7,17 +7,16 @@ const Audiobooks = (props) => {
   const {addToCart} = props;
 
   const displayBooks = () => {
-    return audiobooks.map( (audiobook) => {
-      return (
+    return audiobooks.map( (audiobook) => (
       <div className="audiobook-container" key={audiobook.id}>
         <ul className="audiobookUl">
-          <li className="audiobookTitle">{audiobook.title}</li>
+          <BookLink {...audiobook} />
           <li className="audiobookTitle">{audiobook.author}</li>
         </ul>
         <button onClick={() => addToCart(audiobook)}>Add</button>
       </div>
+      )
     )
-      })
   }
 
   return (
