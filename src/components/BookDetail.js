@@ -8,6 +8,7 @@ const BookDetail = () => {
     const bookDetail = audiobooks.find( ({id}) => id === bookId)
     return (
       <ul> 
+        <li><img src={bookDetail.img} alt={`${bookDetail.title} cover art.`} /></li>
         <li>{bookDetail.title}</li>
         <li>{bookDetail.author}</li>
       </ul>

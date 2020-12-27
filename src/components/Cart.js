@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import BookLink from './BookLink';
 
 const Cart = (props) => {
   
@@ -47,8 +47,8 @@ const Cart = (props) => {
     });
   }
 
+  // Want to delete if less than 1, but want to be able to clear the box and leave an empty string.
   const checkCartInput = e => {
-    
     if(e.target.value === "") {
       e.target.setCustomValidity("Please input a number or remove.")
       e.target.reportValidity()
@@ -62,7 +62,7 @@ const Cart = (props) => {
     const items = Array.from(shoppingCart.keys());
     const display = items.map((item, index) => (
       <li key={index}>
-        <p><Link to={`/audiobook/${item.id}`}>{item.title}</Link></p>
+        <p><BookLink {...item} /></p>
         <p>Quantity: 
         <button className='adjust-button' onClick={() => adjustQuantity(item, 1)}>+</button>
         <input type='number' onChange={e => handleChange(e, item)} value={shoppingCart.get(item)}></input>

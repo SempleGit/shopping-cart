@@ -12,6 +12,7 @@ const Audiobooks = (props) => {
         <ul className="audiobookUl">
           <BookLink {...audiobook} />
           <li className="audiobookTitle">{audiobook.author}</li>
+          <li><img src={audiobook.img} alt={`${audiobook.title} cover art.`} /></li>
         </ul>
         <button onClick={() => addToCart(audiobook)}>Add</button>
       </div>
