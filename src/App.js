@@ -9,13 +9,19 @@ function App() {
 
   const [cartItems, setCart] = useState(new Map());
   
+  const addToCart = (itemToAdd) => {
+    setCart((items) => {
+      return items.has(itemToAdd) ? items.set(itemToAdd, items.get(itemToAdd)+1): items.set(itemToAdd, 1);
+    });
+  }
+
   return (
     <BrowserRouter>
       <Nav />
       <Switch>
-        <Route exact path='/'><Home cartItems={cartItems} setCart={setCart} /></Route>
+        <Route exact path='/'><Home cartItems={cartItems} addToCart={addToCart} /></Route>
         <Route path='/cart'><Cart cartItems={cartItems} setCart={setCart} /></Route>
-        <Route path='/audiobook/:id'><BookDetail /></Route>
+        <Route path='/audiobook/:id'><BookDetail addToCart={addToCart} /></Route>
       </Switch>
     </BrowserRouter>
   )

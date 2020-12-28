@@ -2,16 +2,19 @@ import React from 'react';
 import { audiobooks } from './helpers';
 import { useParams } from 'react-router-dom';
 
-const BookDetail = () => {
+const BookDetail = (props) => {
   const { id } = useParams();
   const getBook = (bookId) => {
     const bookDetail = audiobooks.find( ({id}) => id === bookId)
     return (
-      <ul> 
-        <li><img src={bookDetail.img} alt={`${bookDetail.title} cover art.`} /></li>
-        <li>{bookDetail.title}</li>
-        <li>{bookDetail.author}</li>
-      </ul>
+      <div className='book-details'>
+        <ul> 
+          <li><img src={bookDetail.img} alt={`${bookDetail.title} cover art.`} /></li>
+          <li>{bookDetail.title}</li>
+          <li>{bookDetail.author}</li>
+        </ul>
+        <button onClick={() => props.addToCart(bookDetail)}>Add to cart</button>
+      </div>
     )
   }
 

@@ -75,12 +75,12 @@ const Cart = (props) => {
   }
 
   return (
-    <div>
+    <div className='cart-wrapper'>
       <h1>Shopping Cart</h1>
       <ul>
         {cartDisplay()}
       </ul>
-      {Boolean(props.cartItems.size) && <button onClick={emptyCart}>Empty Cart</button>}
+      {props.cartItems.size ? <button onClick={emptyCart}>Empty Cart</button> : <p>You shopping cart is empty.</p>}
     </div>
   )
 }
