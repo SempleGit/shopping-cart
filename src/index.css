@@ -15,3 +15,11 @@ code {
 .adjust-button {
   margin: .5rem;
 }
+
+button {
+  cursor: pointer;
+}
+
+input[type="number"] {
+  width: 3rem;
+}

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const BookLink = (props) => {
   return (
-    <Link to={`audiobook/${props.id}`}>
-      <div>{props.title}</div>
+    <Link className='detail-link' to={`audiobook/${props.id}`}>
+      {props.title}
     </Link>
   )
 }
