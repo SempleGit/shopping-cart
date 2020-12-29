@@ -75,7 +75,7 @@ const Cart = (props) => {
   }
 
   return (
-    <div className='cart-wrapper'>
+    <div className='main-container'>
       <h1>Shopping Cart</h1>
       <ul>
         {cartDisplay()}

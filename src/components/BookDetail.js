@@ -10,8 +10,10 @@ const BookDetail = (props) => {
     return (
       <div className='audiobook'>
           <img src={bookDetail.img} alt={`${bookDetail.title} cover art.`} />
-          <p>{bookDetail.title}</p>
-          <p>{bookDetail.author}</p>
+          <h3>{bookDetail.title}</h3>
+          <p>By: {bookDetail.author}</p>
+          <h4>Publisher's Summary</h4>
+          <p>{bookDetail.summary}</p>
         <button onClick={() => props.addToCart(bookDetail)}>Add to cart</button>
       </div>
     )
