@@ -13,7 +13,7 @@ const BookDetail = (props) => {
           <h3>{bookDetail.title}</h3>
           <p>By: {bookDetail.author}</p>
           <h4>Publisher's Summary</h4>
-          <p>{bookDetail.summary}</p>
+          <p className='summary'>{bookDetail.summary}</p>
         <button onClick={() => props.addToCart(bookDetail)}>Add to cart</button>
       </div>
     )
