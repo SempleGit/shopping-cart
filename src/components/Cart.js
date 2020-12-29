@@ -76,7 +76,7 @@ const Cart = (props) => {
 
   return (
     <div className='main-container'>
-      <h1>Shopping Cart</h1>
+      <h1>Cart</h1>
       <ul>
         {cartDisplay()}
       </ul>

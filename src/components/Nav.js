@@ -9,7 +9,10 @@ const Nav = () => {
         <Link to='/' >Home</Link>
       </li>
       <li className='nav-item'>
-        <Link to='/cart'>Shopping Cart</Link>
+        <Link to='/catalogue' >Catalogue</Link>
+      </li>
+      <li className='nav-item'>
+        <Link to='/cart'>Cart</Link>
       </li>
     </ul>
   )

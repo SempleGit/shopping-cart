@@ -1,12 +1,11 @@
 import React from 'react';
-import AudiobookDisplay from './AudiobookDisplay';
+import {Link} from 'react-router-dom';
 
-const Home = (props) => {
-
+const Home = () => {
   return (
-    <div className="main-container">
-      <h1>Shopping Home</h1>
-      <AudiobookDisplay {...props} />
+    <div className='home-container'>
+      <h1>Home</h1>
+      <Link to='/catalogue' >View Catalogue</Link>
     </div>
   )
 }
