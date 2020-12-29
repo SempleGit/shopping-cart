@@ -1,0 +1,15 @@
+.book-details {
+  background-color: rgb(189, 224, 247);
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.summary {
+  max-width: 500px;
+}
