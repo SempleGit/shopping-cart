@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const BookLink = (props) => {
   return (
     <Link className='detail-link' to={`audiobook/${props.id}`}>
-      {props.title}
+      <img className='book-image' src={props.img} alt='book cover art'></img>
+      <p>{props.title}</p>
     </Link>
   )
 }

@@ -17,6 +17,10 @@ code {
   padding: 1rem;
 }
 
+.section-title {
+  color: #E0FBFC;
+}
+
 .adjust-button {
   margin: .5rem;
 }

@@ -10,8 +10,7 @@ const AudiobookDisplay = (props) => {
   const displayBooks = () => {
     return audiobooks.map( (audiobook) => (
       <div className="audiobook-container" key={audiobook.id}>
-        <img className='book-image' src={audiobook.img} alt='book cover art'></img>
-        <p><BookLink {...audiobook} /></p>
+        <BookLink {...audiobook} />
         <p>By: {audiobook.author}</p>
         <button onClick={() => addToCart(audiobook)}>Add to cart</button>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import BookLink from './BookLink';
+import './stylesheets/cart.css';
 
 const Cart = (props) => {
   
@@ -61,26 +62,26 @@ const Cart = (props) => {
     const shoppingCart = new Map(props.cartItems);
     const items = Array.from(shoppingCart.keys());
     const display = items.map((item, index) => (
-      <li key={index}>
-        <p><BookLink {...item} /></p>
+      <div className='cart-item' key={index}>
+        <BookLink {...item} />
         <p>Quantity: 
         <button className='adjust-button' onClick={() => adjustQuantity(item, 1)}>+</button>
         <input type='number' onChange={e => handleChange(e, item)} value={shoppingCart.get(item)}></input>
         <button className='adjust-button' onClick={() => adjustQuantity(item, -1)}>-</button>
         <button onClick={() => deleteItem(item)}>Remove</button>
         </p>
-      </li>
+      </div>
     ));
     return display;
   }
 
   return (
     <div className='main-container'>
-      <h1>Cart</h1>
-      <ul>
+      <h1 className='section-title'>Cart</h1>
+      <div className='cart-container'>
         {cartDisplay()}
-      </ul>
-      {props.cartItems.size ? <button onClick={emptyCart}>Empty Cart</button> : <p>You shopping cart is empty.</p>}
+      </div>
+      {props.cartItems.size ? <button onClick={emptyCart}>Empty Cart</button> : <p className='empty-cart'>You shopping cart is empty.</p>}
     </div>
   )
 }

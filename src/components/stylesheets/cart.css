@@ -1,0 +1,14 @@
+.cart-container {
+  display: flex;
+}
+
+.cart-item {
+  background-color: #E0FBFC;
+  margin: .5rem;
+  padding: 1rem;
+}
+
+.empty-cart {
+  color: powderblue;
+  font-size: 1.25rem;
+}

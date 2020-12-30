@@ -6,7 +6,7 @@ const Catalogue = (props) => {
 
   return (
     <div className='main-container'>
-      <h1 className='catalogue-title'>Catalogue</h1>
+      <h1 className='section-title'>Catalogue</h1>
       <AudiobookDisplay {...props} />
     </div>
   )
