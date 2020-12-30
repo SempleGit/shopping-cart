@@ -1,10 +1,15 @@
 .audiobooks {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .audiobook-container {
-  background-color: powderblue;
-  border: 1px solid gray;
+  background-color: #E0FBFC;
+  margin: .5rem;
   padding: 1rem;
+}
+
+.book-image {
+  width: 20rem;
 }
