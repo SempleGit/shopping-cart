@@ -5,9 +5,11 @@ import './stylesheets/home.css';
 const Home = () => {
   return (
     <div className='home-container'>
-      <div>
-        <Link to='/catalogue' >Enter the world of Hugh Howey</Link>
-      </div>
+      <Link to='/catalogue' >
+        <div className='entrance-container'>
+          Enter the world of Hugh Howey
+        </div>
+      </Link>
     </div>
   )
 }
