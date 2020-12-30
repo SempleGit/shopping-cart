@@ -1,11 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './stylesheets/home.css';
 
 const Home = () => {
   return (
     <div className='home-container'>
-      <h1 className='section-title'>Home</h1>
-      <Link to='/catalogue' >View Catalogue</Link>
+      <div>
+        <Link to='/catalogue' >Enter the world of Hugh Howey</Link>
+      </div>
     </div>
   )
 }

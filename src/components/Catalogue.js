@@ -1,5 +1,5 @@
 import React from 'react';
-import AudiobookDisplay from './AudiobookDisplay';
+import BookDisplay from './BookDisplay';
 import './stylesheets/catalogue.css';
 
 const Catalogue = (props) => {
@@ -7,7 +7,7 @@ const Catalogue = (props) => {
   return (
     <div className='main-container'>
       <h1 className='section-title'>Catalogue</h1>
-      <AudiobookDisplay {...props} />
+      <BookDisplay {...props} />
     </div>
   )
 }

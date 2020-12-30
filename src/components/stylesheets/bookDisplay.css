@@ -1,0 +1,20 @@
+.books {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.book-container {
+  background-color: #E0FBFC;
+  margin: .5rem;
+  padding: 1rem;
+  transition: transform 200ms, filter 100ms;
+}
+
+.book-container:hover {
+  filter: drop-shadow(0 0 0.75rem darkblue);
+  transform: scale(1.05);
+}
+
+.book-image {
+  width: 20rem;
+}

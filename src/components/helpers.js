@@ -6,7 +6,7 @@ import shift from '../images/shift.jpg';
 import beacon23 from '../images/beacon23.jpg';
 import plagiarist from '../images/plagiarist.jpg';
 
-const audiobooks = [
+const books = [
   {
   title: "Wool",
   author: "Hugh Howey",
@@ -61,4 +61,4 @@ const audiobooks = [
   },
 ];
 
-export {audiobooks};
+export {books};

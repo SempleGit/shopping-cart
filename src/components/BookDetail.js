@@ -1,15 +1,15 @@
 import React from 'react';
-import { audiobooks } from './helpers';
-import { useParams } from 'react-router-dom';
+import { books } from './helpers';
+import { Link, useParams } from 'react-router-dom';
 import './stylesheets/bookDetail.css';
 
 const BookDetail = (props) => {
   const { id } = useParams();
   const getBook = (bookId) => {
-    const bookDetail = audiobooks.find( ({id}) => id === bookId)
+    const bookDetail = books.find( ({id}) => id === bookId)
     return (
       <div className='audiobook'>
-          <img src={bookDetail.img} alt={`${bookDetail.title} cover art.`} />
+          <Link to='/catalogue'><img src={bookDetail.img} alt={`${bookDetail.title} cover art.`} /></Link>
           <h3>{bookDetail.title}</h3>
           <p>By: {bookDetail.author}</p>
           <h4>Publisher's Summary</h4>
