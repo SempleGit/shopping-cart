@@ -14,3 +14,13 @@ img {
 .summary {
   max-width: 500px;
 }
+
+.book {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.detail-cart-btn {
+  width: fit-content;
+  align-self: flex-end;
+}

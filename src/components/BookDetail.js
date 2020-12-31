@@ -8,13 +8,13 @@ const BookDetail = (props) => {
   const getBook = (bookId) => {
     const bookDetail = books.find( ({id}) => id === bookId)
     return (
-      <div className='audiobook'>
+      <div className='book'>
           <Link to='/catalogue'><img src={bookDetail.img} alt={`${bookDetail.title} cover art.`} /></Link>
           <h3>{bookDetail.title}</h3>
           <p>By: {bookDetail.author}</p>
           <h4>Publisher's Summary</h4>
           <p className='summary'>{bookDetail.summary}</p>
-        <button onClick={() => props.addToCart(bookDetail)}>Add to cart</button>
+        <button class='detail-cart-btn' onClick={() => props.addToCart(bookDetail)}>Add to cart</button>
       </div>
     )
   }
@@ -22,7 +22,7 @@ const BookDetail = (props) => {
   return (
     <section className='book-details'>
       <h1>Book Details</h1>
-      <p>{getBook(id)}</p>
+      {getBook(id)}
     </section>
   )
 }

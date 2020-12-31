@@ -7,11 +7,19 @@
 
 .entrance-container {
   background-color: rgb(203, 234, 238);
-  padding: 30%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
 }
 
 .entrance-container:hover {
   filter: drop-shadow(0 0 0.75rem white);
   transform: scale(1.05);
+}
+
+.entrance-detail {
+  margin: 1rem 3rem;
+  display: flex;
+  justify-content: center;
 }
