@@ -11,8 +11,10 @@ const BookDisplay = (props) => {
     return books.map( (book) => (
       <div className="book-container" key={book.id}>
         <BookLink {...book} />
-        <p>By: {book.author}</p>
-        <button onClick={() => addToCart(book)}>Add to cart</button>
+        <p className='book-detail'>By: {book.author}</p>
+        <div className='add-btn-container'>
+          <button onClick={() => addToCart(book)}>Add to cart</button>
+        </div>
       </div>
       )
     )

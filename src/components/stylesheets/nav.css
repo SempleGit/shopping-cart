@@ -1,9 +1,11 @@
 .navbar {
   background-color: #C2DFE3;
   display: flex;
+  width: 100%;
   list-style: none;
   padding: 0;
   margin: 0;
+  position: fixed;
 }
 
 .nav-item {

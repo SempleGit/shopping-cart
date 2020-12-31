@@ -5,10 +5,23 @@
 .cart-item {
   background-color: #E0FBFC;
   margin: .5rem;
-  padding: 1rem;
+}
+
+.cart-item:hover {
+  filter: drop-shadow(0 0 0.75rem darkblue);
+  transform: scale(1.05);
+}
+
+.cart-details {
+  padding: 0 1rem;
 }
 
 .empty-cart {
   color: powderblue;
   font-size: 1.25rem;
+  margin: .5rem;
+}
+
+.empty-cart-btn {
+  margin: .5rem;
 }

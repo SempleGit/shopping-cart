@@ -6,7 +6,6 @@
 .book-container {
   background-color: #E0FBFC;
   margin: .5rem;
-  padding: 1rem;
   transition: transform 200ms, filter 100ms;
 }
 
@@ -17,4 +16,14 @@
 
 .book-image {
   width: 20rem;
+}
+
+.book-detail {
+  margin: 0 1rem;
+}
+
+.add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: .5rem 1rem;
 }

@@ -64,11 +64,11 @@ const Cart = (props) => {
     const display = items.map((item, index) => (
       <div className='cart-item' key={index}>
         <BookLink {...item} />
-        <p>Quantity: 
-        <button className='adjust-button' onClick={() => adjustQuantity(item, 1)}>+</button>
-        <input type='number' onChange={e => handleChange(e, item)} value={shoppingCart.get(item)}></input>
-        <button className='adjust-button' onClick={() => adjustQuantity(item, -1)}>-</button>
-        <button onClick={() => deleteItem(item)}>Remove</button>
+        <p className='cart-details'>Quantity: 
+          <button className='adjust-button' onClick={() => adjustQuantity(item, 1)}>+</button>
+          <input type='number' onChange={e => handleChange(e, item)} value={shoppingCart.get(item)}></input>
+          <button className='adjust-button' onClick={() => adjustQuantity(item, -1)}>-</button>
+          <button onClick={() => deleteItem(item)}>Remove</button>
         </p>
       </div>
     ));
@@ -81,7 +81,7 @@ const Cart = (props) => {
       <div className='cart-container'>
         {cartDisplay()}
       </div>
-      {props.cartItems.size ? <button onClick={emptyCart}>Empty Cart</button> : <p className='empty-cart'>You shopping cart is empty.</p>}
+      {props.cartItems.size ? <button className='empty-cart-btn' onClick={emptyCart}>Empty Cart</button> : <p className='empty-cart'>You shopping cart is empty.</p>}
     </div>
   )
 }

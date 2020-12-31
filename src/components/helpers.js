@@ -5,6 +5,7 @@ import sand from '../images/sand.jpg';
 import shift from '../images/shift.jpg';
 import beacon23 from '../images/beacon23.jpg';
 import plagiarist from '../images/plagiarist.jpg';
+import machineLearning from '../images/machineLearning.jpg';
 
 const books = [
   {
@@ -59,6 +60,17 @@ const books = [
   img: plagiarist,
   id: uniqid(),
   },
+  {
+    title: "Machine Learning",
+    author: "Hugh Howey",
+    summary: `A new collection of stories, including some that have never before been seen, from the New York Times best-selling author of the Silo trilogy
+
+    Hugh Howey is known for crafting riveting and immersive tales of boundless imagination, spawning millions of fans worldwide, first with his best-selling novel Wool, and then with other enthralling works such as Sand and Beacon 23. Now comes Machine Learning, an impressive collection of Howey's science fiction and fantasy short fiction, including three stories set in the world of Wool, two never-before-published tales written exclusively for this volume, and 15 additional stories collected here for the first time. These stories explore everything from artificial intelligence to parallel universes to video games, and each story is accompanied by an author's note exploring the background and genesis of each story.
+    
+    Howey's incisive mind makes Machine Learning: New and Collected Stories an addictive and thought-provoking selection of short works - from a modern master at the top of his game.`,
+    img: machineLearning,
+    id: uniqid()
+  }
 ];
 
 export {books};

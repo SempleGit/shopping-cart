@@ -2,13 +2,16 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  padding: 10rem;
 }
 
 .entrance-container {
   background-color: rgb(203, 234, 238);
   padding: 30%;
-  margin: 25%;
-  display: flex;
-  justify-content: center;
   text-align: center;
+}
+
+.entrance-container:hover {
+  filter: drop-shadow(0 0 0.75rem white);
+  transform: scale(1.05);
 }
