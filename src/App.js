@@ -21,9 +21,9 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path = '/'><Home /></Route>
-        <Route path='/catalogue'><Catalogue cartItems={cartItems} addToCart={addToCart} /></Route>
+        <Route exact path='/catalogue'><Catalogue cartItems={cartItems} addToCart={addToCart} /></Route>
         <Route path='/cart'><Cart cartItems={cartItems} setCart={setCart} /></Route>
-        <Route path='/audiobook/:id'><BookDetail addToCart={addToCart} /></Route>
+        <Route path='/catalogue/:id'><BookDetail addToCart={addToCart} /></Route>
       </Switch>
     </BrowserRouter>
   )

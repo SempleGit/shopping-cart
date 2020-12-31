@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import './stylesheets/bookLink.css';
 
 const BookLink = (props) => {
+  const { url } = useRouteMatch();
   return (
-    <Link className='detail-link' to={`audiobook/${props.id}`}>
+    <Link className='detail-link' to={`${url}/${props.id}`}>
       <img className='book-image' src={props.img} alt='book cover art'></img>
       <p className='link-details'>{props.title}</p>
     </Link>
