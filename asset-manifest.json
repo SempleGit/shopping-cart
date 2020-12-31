@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.8014ace0.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.5dfb8b31.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.5dfb8b31.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.b56c1ee8.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.b56c1ee8.js.map",
+    "static/css/2.679831fc.chunk.css": "/shopping-cart/static/css/2.679831fc.chunk.css",
+    "static/js/2.2c5282ea.chunk.js": "/shopping-cart/static/js/2.2c5282ea.chunk.js",
+    "static/js/2.2c5282ea.chunk.js.map": "/shopping-cart/static/js/2.2c5282ea.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/shopping-cart/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.8014ace0.chunk.css.map": "/shopping-cart/static/css/main.8014ace0.chunk.css.map",
+    "static/js/2.2c5282ea.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.2c5282ea.chunk.js.LICENSE.txt",
+    "static/media/beacon23.8b1cedf0.jpg": "/shopping-cart/static/media/beacon23.8b1cedf0.jpg",
+    "static/media/dust.ff9ab6c2.jpg": "/shopping-cart/static/media/dust.ff9ab6c2.jpg",
+    "static/media/machineLearning.fdfa62e0.jpg": "/shopping-cart/static/media/machineLearning.fdfa62e0.jpg",
+    "static/media/plagiarist.7690adbd.jpg": "/shopping-cart/static/media/plagiarist.7690adbd.jpg",
+    "static/media/sand.28c969e1.jpg": "/shopping-cart/static/media/sand.28c969e1.jpg",
+    "static/media/shellCollector.774f5de9.jpg": "/shopping-cart/static/media/shellCollector.774f5de9.jpg",
+    "static/media/shift.64ea0e6c.jpg": "/shopping-cart/static/media/shift.64ea0e6c.jpg",
+    "static/media/wool.106d25c8.jpg": "/shopping-cart/static/media/wool.106d25c8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b56c1ee8.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.2c5282ea.chunk.js",
+    "static/css/main.8014ace0.chunk.css",
+    "static/js/main.5dfb8b31.chunk.js"
+  ]
+}
