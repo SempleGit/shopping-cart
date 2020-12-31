@@ -4,6 +4,7 @@ import './stylesheets/bookLink.css';
 
 const BookLink = (props) => {
   const { url } = useRouteMatch();
+  console.log(url);
   return (
     <Link className='detail-link' to={`${url}/${props.id}`}>
       <img className='book-image' src={props.img} alt='book cover art'></img>

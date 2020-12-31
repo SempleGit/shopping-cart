@@ -6,13 +6,13 @@ const Nav = () => {
   return (
     <ul className='navbar'>
       <li className='nav-item'>
-        <Link to='/' >Home</Link>
+        <Link to='/shopping-cart/' >Home</Link>
       </li>
       <li className='nav-item'>
-        <Link to='/catalogue' >Catalogue</Link>
+        <Link to='/shopping-cart/catalogue'>Catalogue</Link>
       </li>
       <li className='nav-item cart-link'>
-        <Link to='/cart'>Cart</Link>
+        <Link to='/shopping-cart/cart'>Cart</Link>
       </li>
     </ul>
   )

@@ -9,12 +9,12 @@ const BookDetail = (props) => {
     const bookDetail = books.find( ({id}) => id === bookId)
     return (
       <div className='book'>
-          <Link to='/catalogue'><img src={bookDetail.img} alt={`${bookDetail.title} cover art.`} /></Link>
+          <Link to='/shopping-cart/catalogue'><img src={bookDetail.img} alt={`${bookDetail.title} cover art.`} /></Link>
           <h3>{bookDetail.title}</h3>
           <p>By: {bookDetail.author}</p>
           <h4>Publisher's Summary</h4>
           <p className='summary'>{bookDetail.summary}</p>
-        <button class='detail-cart-btn' onClick={() => props.addToCart(bookDetail)}>Add to cart</button>
+        <button className='detail-cart-btn' onClick={() => props.addToCart(bookDetail)}>Add to cart</button>
       </div>
     )
   }

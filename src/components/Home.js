@@ -5,7 +5,7 @@ import './stylesheets/home.css';
 const Home = () => {
   return (
     <div className='home-container'>
-      <Link to='/catalogue' >
+      <Link to='/shopping-cart/catalogue' >
         <div className='entrance-container'>
           <p className='entrance-detail'>The writings</p>
           <p className='entrance-detail'>of</p> 
