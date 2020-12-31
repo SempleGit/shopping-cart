@@ -4,11 +4,12 @@ import Home from './components/Home';
 import Catalogue from './components/Catalogue';
 import Cart from './components/Cart';
 import BookDetail from './components/BookDetail';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, useRouteMatch } from "react-router-dom";
 
 function App() {
-
+  const { url } = useRouteMatch;
   const [cartItems, setCart] = useState(new Map());
+
   
   const addToCart = (itemToAdd) => {
     setCart((items) => {
@@ -20,10 +21,10 @@ function App() {
     <BrowserRouter>
       <Nav />
       <Switch>
-        <Route exact path = '/'><Home /></Route>
-        <Route exact path='/catalogue'><Catalogue cartItems={cartItems} addToCart={addToCart} /></Route>
-        <Route path='/cart'><Cart cartItems={cartItems} setCart={setCart} /></Route>
-        <Route path='/catalogue/:id'><BookDetail addToCart={addToCart} /></Route>
+        <Route exact path = {`${url}/`}><Home /></Route>
+        <Route exact path={`${url}/catalogue`}><Catalogue cartItems={cartItems} addToCart={addToCart} /></Route>
+        <Route path={`${url}/cart`}><Cart cartItems={cartItems} setCart={setCart} /></Route>
+        <Route path={`${url}/catalogue/:id`}><BookDetail addToCart={addToCart} /></Route>
       </Switch>
     </BrowserRouter>
   )
